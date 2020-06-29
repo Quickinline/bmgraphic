@@ -1,13 +1,7 @@
 <template>
   <div class="background-pattern">
     <div class="container px-12 py-10 font-baumans text-2xl">
-      <!-- <h2 class="text-4xl text-gray-700 text-center">
-        <span class="text-bmg-green">&#9654; </span>
-        <span class="text-black"> BM Graphic </span>
-        spécialisée dans l’impression publicitaire
-        <span class="text-bmg-green"> &#9664;</span>
-      </h2> -->
-      <generic-title black-text=" BM Graphic " gray-text="spécialisée dans l’impression publicitaire" />
+      <generic-title animated="fade-up" black-text=" BM Graphic " gray-text="spécialisée dans l’impression publicitaire" />
     </div>
     <div class="container pb-10 justify-center flex flex-wrap">
       <div v-for="product in products" :key="product.text" class="relative w-1/2 md:w-1/3 lg:w-1/4 p-2">
@@ -30,44 +24,44 @@ export default {
     return {
       products: [
         {
-          text: 'hey',
-          link: '/about',
-          image: '/images/products/carte_visite.jpg'
+          text: 'Impression Grand Format',
+          link: '/services/impression-grand-format',
+          image: '/images/index/product-content/bache tendu.jpg'
         },
         {
-          text: 'hey1',
-          link: '/about',
-          image: '/images/products/carte_visite.jpg'
+          text: 'Impression Petit Format',
+          link: '/service/impression-petit-format',
+          image: '/images/index/product-content/brochure.jpg'
         },
         {
-          text: 'hey2',
-          link: '/about',
-          image: '/images/products/carte_visite.jpg'
+          text: 'Décoration',
+          link: '/services/Décoration',
+          image: '/images/index/product-content/habillage murale.jpg'
         },
         {
-          text: 'hey3',
-          link: '/about',
-          image: '/images/products/carte_visite.jpg'
+          text: 'PLV & Stands',
+          link: '/services/PLV-&-stands',
+          image: 'images/index/product-content/STAND 43.jpg'
         },
         {
-          text: 'hey20',
-          link: '/about',
-          image: '/images/products/carte_visite.jpg'
+          text: 'Enseignes & Signalétique',
+          link: '/services/enseignes-&-signalétique',
+          image: '/images/index/product-content/totem.jpg'
         },
         {
-          text: 'hey21',
-          link: '/about',
-          image: '/images/products/carte_visite.jpg'
+          text: 'Communication Visuelle',
+          link: '/services/communication-visuelle',
+          image: '/images/index/product-content/carte de visite.jpg'
         },
         {
-          text: 'hey22',
-          link: '/about',
-          image: '/images/products/carte_visite.jpg'
+          text: 'Marquage Textile',
+          link: '/services/marquage-textile',
+          image: '/images/index/product-content/flokage.jpg'
         },
         {
-          text: 'hey23',
-          link: '/about',
-          image: '/images/products/carte_visite.jpg'
+          text: 'Marquage Véhicules',
+          link: '/services/Marquage-véhicules',
+          image: '/images/index/product-content/couvring total.jpg'
         }
       ]
 
@@ -81,10 +75,10 @@ export default {
   background: url('~assets/images/pattern.png') repeat;
 }
 .overlay{
-  @apply flex justify-center items-center absolute bottom-0 m-2 top-0 right-0 left-0 bg-bmg-green-light opacity-0 transition-opacity duration-100 ease-linear text-center
+  @apply flex justify-center items-center absolute bottom-0 m-2 top-0 right-0 left-0 bg-transparent-black opacity-0 transition-opacity duration-100 ease-linear text-center
 }
 .overlay:hover{
-  @apply opacity-75
+  @apply opacity-100
 }
 
 </style>

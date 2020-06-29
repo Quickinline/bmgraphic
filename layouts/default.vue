@@ -4,14 +4,17 @@
     <transition>
       <nuxt />
     </transition>
+    <footer-element />
   </div>
 </template>
 
 <script>
-import navbar from '../components/global/navbar'
+import navbar from '~/components/global/navbar'
+import footer from '~/components/global/footer'
 export default {
   components: {
-    navbar
+    navbar,
+    'footer-element': footer
   }
 }
 </script>

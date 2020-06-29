@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-4">
+  <div class="container">
     <div class="glide">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
@@ -62,7 +62,7 @@ export default {
     new Glide('.glide', {
       type: 'carousel',
       gap: 5,
-      perView: 5,
+      perView: 4,
       animationDuration: 400,
       hoverpause: false,
       autoplay: 3000,

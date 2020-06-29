@@ -1,7 +1,7 @@
 <template>
   <div class="container mt-8 mb-8 flex flex-col">
-    <h1 class="text-5xl text-bmg-light-gray text-center mb-4 font-baumans">
-      La bonne adresse pour toute vos impressions
+    <h1 class="text-5xl text-bmg-light-gray md:text-center mb-4 font-baumans">
+      La bonne adresse pour toutes vos impressions
     </h1>
     <div class="flex flex-wrap">
       <div class="w-full md:w-1/2 whitespace-pre-line tracking-wide text-bmg-light-gray">

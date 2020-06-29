@@ -26,11 +26,15 @@ module.exports = {
 			  'bmg-green-darken-20': 'hsl(64, 92%, 27%)',
 			  'bmg-green': '#D7E609',
 			  'bmg-green-light': 'rgba(215, 230, 9, 0.7)',
-			  'bmg-light-gray': '#495057'
+			  'bmg-light-gray': '#495057',
+			  'transparent-black': 'rgba(0,0,0,0.4)'
 		  },
 		  fontFamily: {
 			  baumans: ['Baumans'],
 			  roboto: 'Roboto, Arial, Tahoma, sans-serif'
+		  },
+		  boxShadow: {
+			  'outline-green': '0 0 0 3px rgba(215, 230, 9, 0.5)'
 		  }
 	  }
   },

@@ -4,3 +4,7 @@
 @import 'tailwindcss/components';
 /* purgecss end ignore */
 @import 'tailwindcss/utilities';
+
+.transition-height{
+  transition-property: height;
+}

@@ -3,7 +3,7 @@
     <div class="svg-container hover:bg-gray-base hover:text-bmg-green" @mouseover="hover = true" @mouseleave="hover = false">
       <slot name="svg" />
     </div>
-    <h2 class="text-2xl text-gray-base text-center mt-2 font-baumans" v-text="titleText" />
+    <h2 class="text-xl text-gray-base text-center mt-2 font-baumans" v-text="titleText" />
     <p class="text-gray-base text-center text-sm" v-text="descriptionText" />
   </div>
 </template>
