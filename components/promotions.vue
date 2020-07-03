@@ -3,8 +3,8 @@
     <div class="container px-12 py-10 font-baumans text-2xl">
       <generic-title black-text="Promotions" gray-text="à ne pas manquer !" />
     </div>
-    <div class="container justify-center flex flex-wrap">
-      <div v-for="image in images" :key="image" class="w-full p-3 md:w-1/2 lg:w-1/3" data-aos="fade-down">
+    <div class="container justify-center overflow-hidden flex flex-wrap">
+      <div v-for="image in images" :key="image" class="w-full p-3 md:w-1/2 lg:w-1/3" data-aos="fade">
         <img class="w-full" :src="image" alt="">
       </div>
     </div>

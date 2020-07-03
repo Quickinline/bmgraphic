@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100 font-roboto">
+  <div class="bg-white font-roboto">
     <div class="bg-bmg-light-gray py-1 md:py-3">
       <div class="container flex flex-row flex-wrap justify-center md:justify-between text-gray-300 font-semibold text-xs">
         <div class="flex flex-row">
@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <nav class="flex container items-center lg:items-end justify-between flex-wrap">
+    <nav class="container w-full flex bg-white items-center lg:items-end justify-between flex-wrap">
       <div class="flex items-center flex-shrink-0 text-white my-2 mr-6">
         <img src="~assets/svg/logo.svg" class="w-48" alt srcset>
       </div>
@@ -54,7 +54,7 @@
               class=""
               :btn-text="nav.name"
               btn-class="md:py-2 md:px-2 uppercase text-base sm:block text-gray-600 font-normal hover:text-bmg-green-light mt-4 lg:mt-0 lg:mx-2 lg:inline-block cursor-pointer"
-              menu-class="relative md:absolute md:bg-white md:border w-56 rounded md:left-0"
+              menu-class="relative md:absolute md:bg-white md:border w-64 rounded md:left-0"
               :to="nav.link"
               hover
             >
@@ -63,7 +63,7 @@
                   v-for="sub in nav.sub"
                   :key="sub.name"
                   href="#responsive-header"
-                  class="block border-b font-light pl-1 hover:bg-gray-300 py-3 pl-4 pr-4 text-gray-700 hover:text-black"
+                  class="block border-b font-light hover:bg-gray-300 py-2 pl-4 pr-4 text-gray-700 hover:text-black"
                   :to="'/services/'+sub.name"
                   v-text="format(sub.name)"
                 />

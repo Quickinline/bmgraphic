@@ -13,7 +13,7 @@ import productContent from '~/components/productContent.vue'
 import twoProducts from '~/components/twoProducts.vue'
 import promotions from '~/components/promotions.vue'
 export default {
-  layout: 'default',
+  // layout: 'default',
   components: {
     'carousel-slider': carousel,
     'product-content': productContent,

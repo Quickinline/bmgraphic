@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="font-bold text-gray-base cursor-pointer focus:outline-none" @click="show = !show">
+    <button class="font-bold text-gray-base cursor-pointer capitalize focus:outline-none" @click="show = !show">
       <svg
         class="w-4 inline"
         fill="none"
@@ -12,7 +12,7 @@
       ><path d="M9 5l7 7-7 7" /></svg>
       {{ detail.name }}
     </button>
-    <span v-if="show" :class="['block ml-6 whitespace-pre-line']" v-text="detail.description" />
+    <span v-if="show" :class="['block ml-6 whitespace-pre-line text-sm text-gray-700']" v-text="detail.description" />
   </div>
 </template>
 

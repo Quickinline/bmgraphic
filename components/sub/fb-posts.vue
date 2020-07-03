@@ -7,7 +7,6 @@
       class="fb-page w-full"
       :href="$globalVars().facebookPage"
       data-tabs="timeline"
-      data-height=""
       data-small-header="true"
       data-adapt-container-width="true"
       data-hide-cover="false"

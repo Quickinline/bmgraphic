@@ -6,7 +6,7 @@ export default ({ app }, inject) => {
       instagramPage: '#',
       phone: '0555 55 55 55',
       email: 'studiobmgraphic@gmail.com',
-      address: 'BT 29 AADL OULED YAICH SECTEUR C2S2',
+      address: 'Cité Benyoucef Benkhedda AADL OULED YAICH BT29 C2S2',
       hours: 'de 8h à 17h samedi-jeudi'
     }
   })

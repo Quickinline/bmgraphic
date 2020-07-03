@@ -61,8 +61,7 @@
               <h2 class="font-baumans text-2xl">
                 Adresse
               </h2>
-              <!-- TODO: add adresse -->
-              <span class="text-sm">Ouled Yaich</span>
+              <span class="text-sm" v-text="this.$globalVars().address" />
             </div>
           </div>
           <div class="flex mx-4 flex-row my-5">
@@ -84,8 +83,7 @@
               <h2 class="font-baumans text-2xl">
                 Appel d'urgence
               </h2>
-              <!-- TODO: Add Diffrent Appel d'urgence -->
-              <span class="text-sm">0560 89 16 49</span>
+              <span class="text-sm" v-text="this.$globalVars().phone" />
             </div>
           </div>
         </div>

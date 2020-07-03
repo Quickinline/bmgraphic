@@ -1,7 +1,7 @@
 <template>
   <div class="p-8">
     <img class="w-full" :src="cardData.image" alt="">
-    <h2 class="font-baumans text-2xl text-gray-base" v-text="cardData.title" />
+    <h2 class="font-baumans capitalize text-2xl text-gray-base" v-text="cardData.title" />
     <p class="text-left font-light" v-text="cardData.description" />
   </div>
 </template>

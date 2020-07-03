@@ -1,10 +1,10 @@
 <template>
   <div class="container flex flex-row justify-between flex-wrap">
-    <div class="w-3/5">
+    <div class="w-full md:w-3/5">
       <carousel :slider-images="images" />
     </div>
-    <div class="w-2/5 px-4">
-      <h4 class="font-baumans text-bmg-green text-2xl" v-text="title" />
+    <div class="w-full md:w-2/5 px-4">
+      <h4 class="font-baumans capitalize text-bmg-green text-2xl" v-text="title" />
       <ul>
         <li v-for="(detail,index) in details" :key="index" class="py-2">
           <detail-item :detail="detail" />

@@ -7,7 +7,7 @@
       </h2>
     </div>
     <div class="container justify-center flex flex-wrap">
-      <div v-for="(product,index) in products" :key="product.name" class="w-full lg:w-1/2 p-4 sm:flex" :data-aos="index%2==0 ? 'fade-right' : 'fade-left'">
+      <div v-for="product in products" :key="product.name" class="w-full lg:w-1/2 p-4 sm:flex" data-aos="zoom-in">
         <div class="h-48 sm:h-auto sm:w-48 md:w-64 flex-none bg-cover bg-center text-center" :style="{'background-image': 'url(' + product.image+')'}" />
 
         <!-- card-content -->

@@ -1,10 +1,10 @@
 <template>
   <div class="bg-gray-base">
     <div class="container py-8 flex flex-row flex-wrap">
-      <div class="w-1/4 px-2">
+      <div class="w-1/2 pb-6 md:pb-0 md:w-1/4 px-2">
         <img src="~assets/svg/logo.svg" alt="">
       </div>
-      <div class="w-1/4 px-2 text-white">
+      <div class="w-1/2 pb-6 md:pb-0 md:w-1/4 px-2 text-white">
         <h2 class="font-baumans text-xl mb-2">
           Plan du Site
         </h2>
@@ -14,17 +14,17 @@
           </li>
         </ul>
       </div>
-      <div class="w-1/4 text-white">
+      <div class="w-1/2 pb-6 md:pb-0 md:w-1/4 text-white">
         <h2 class="font-baumans text-xl mb-2">
           Services
         </h2>
         <ul>
           <li v-for="(service,index) in this.$store.state.services.list" :key="index" class="text-bmg-green text-xs hover:underline mb-1">
-            <nuxt-link :to="'/services/'+service.name" v-text="format(service.name)" />
+            <nuxt-link active-class="underline font-bold" :to="'/services/'+service.name" v-text="format(service.name)" />
           </li>
         </ul>
       </div>
-      <div class="text-white w-1/4">
+      <div class="w-1/2 pb-6 md:pb-0 md:w-1/4 text-white">
         <h2 class="font-baumans text-xl mb-2">
           Nous Contacter
         </h2>

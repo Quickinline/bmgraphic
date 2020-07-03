@@ -23,7 +23,7 @@
 <script>
 import '../node_modules/@glidejs/glide/dist/css/glide.core.min.css'
 import '../node_modules/@glidejs/glide/dist/css/glide.theme.min.css'
-import Glide, { Controls, Breakpoints, Swipe } from '@glidejs/glide/dist/glide.modular.esm'
+import Glide, { Controls, Breakpoints, Swipe, Autoplay } from '@glidejs/glide/dist/glide.modular.esm'
 export default {
   props: {
     sliderImages: {
@@ -41,10 +41,10 @@ export default {
       gap: 0,
       //   animationDuration: 400,
       hoverpause: false,
-      autoplay: 3000,
+      autoplay: 2000,
       peek: 0
     })
-    glide.mount({ Controls, Breakpoints, Swipe })
+    glide.mount({ Controls, Breakpoints, Swipe, Autoplay })
   }
 }
 </script>

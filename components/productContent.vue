@@ -1,13 +1,13 @@
 <template>
   <div class="background-pattern">
     <div class="container px-12 py-10 font-baumans text-2xl">
-      <generic-title animated="fade-up" black-text=" BM Graphic " gray-text="spécialisée dans l’impression publicitaire" />
+      <generic-title animated="fade" black-text=" BM Graphic " gray-text="spécialisée dans l’impression publicitaire" />
     </div>
     <div class="container pb-10 justify-center flex flex-wrap">
       <div v-for="product in products" :key="product.text" class="relative w-1/2 md:w-1/3 lg:w-1/4 p-2">
         <img :src="product.image" class="w-full" alt="">
-        <div class="overlay">
-          <h2 class="text-white font-semibold font-baumans text-4xl" v-text="product.text" />
+        <div class="overlay" @click="goto(product)">
+          <h2 class="text-white font-semibold w-full break-words font-baumans text-4xl" v-text="product.text" />
         </div>
       </div>
     </div>
@@ -66,6 +66,11 @@ export default {
       ]
 
     }
+  },
+  methods: {
+    goto (product) {
+      this.$router.push({ path: product.link })
+    }
   }
 }
 </script>
@@ -75,7 +80,7 @@ export default {
   background: url('~assets/images/pattern.png') repeat;
 }
 .overlay{
-  @apply flex justify-center items-center absolute bottom-0 m-2 top-0 right-0 left-0 bg-transparent-black opacity-0 transition-opacity duration-100 ease-linear text-center
+  @apply flex justify-center items-center absolute bottom-0 m-2 top-0 right-0 left-0 bg-transparent-black opacity-0 transition-opacity duration-100 ease-linear text-center cursor-pointer
 }
 .overlay:hover{
   @apply opacity-100
