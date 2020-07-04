@@ -7,7 +7,7 @@
       </h2>
     </div>
     <div class="container justify-center flex flex-wrap">
-      <div v-for="product in products" :key="product.name" class="w-full lg:w-1/2 p-4 sm:flex" data-aos="zoom-in">
+      <div v-for="product in products" :key="product.name" class="w-full lg:w-1/2 p-4 sm:flex">
         <div class="h-48 sm:h-auto sm:w-48 md:w-64 flex-none bg-cover bg-center text-center" :style="{'background-image': 'url(' + product.image+')'}" />
 
         <!-- card-content -->
@@ -25,7 +25,8 @@
 </template>
 
 <script>
-import 'aos/dist/aos.css'
+// import 'aos/dist/aos.css'
+// import AOS from 'aos'
 export default {
   data () {
     return {
@@ -44,9 +45,6 @@ export default {
         }
       ]
     }
-  },
-  created () {
-    import('aos').then(AOS => AOS.init())
   }
 }
 </script>

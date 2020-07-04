@@ -8,6 +8,8 @@
 </template>
 
 <script>
+
+// Components
 import carousel from '~/components/carousel.vue'
 import productContent from '~/components/productContent.vue'
 import twoProducts from '~/components/twoProducts.vue'

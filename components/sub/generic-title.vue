@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import 'aos/dist/aos.css'
 export default {
   props: {
     blackText: {
@@ -29,13 +28,9 @@ export default {
       type: String,
       default: ''
     }
-  },
-  created () {
-    import('aos').then(AOS => AOS.init())
   }
 }
 </script>
 
 <style>
-
 </style>

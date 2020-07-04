@@ -1,21 +1,19 @@
 <template>
-  <div>
-    <div class="glide">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
-          <li v-for="image in sliderImages" :key="image" class="glide__slide">
-            <img class="mx-auto h-full w-full" :src="image" alt srcset>
-          </li>
-        </ul>
-      </div>
-      <div data-glide-el="controls">
-        <button data-glide-dir="<" class="absolute text-5xl mx-16 text-dark-gray hover:text-white top-0 bottom-0 focus:outline-none">
-          &lt;
-        </button>
-        <button data-glide-dir=">" class="absolute text-5xl mx-16 text-dark-gray hover:text-white top-0 right-0 bottom-0 focus:outline-none">
-          &gt;
-        </button>
-      </div>
+  <div class="glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <li v-for="image in images" :key="image.href" class="glide__slide">
+          <img class="mx-auto h-full w-full" :src="image.href" alt srcset>
+        </li>
+      </ul>
+    </div>
+    <div data-glide-el="controls">
+      <button data-glide-dir="<" class="absolute text-5xl mx-16 text-dark-gray hover:text-white top-0 bottom-0 focus:outline-none">
+        &lt;
+      </button>
+      <button data-glide-dir=">" class="absolute text-5xl mx-16 text-dark-gray hover:text-white top-0 right-0 bottom-0 focus:outline-none">
+        &gt;
+      </button>
     </div>
   </div>
 </template>
@@ -33,15 +31,26 @@ export default {
       }
     }
   },
+  computed: {
+    images () {
+      const result = []
+      this.sliderImages.forEach((element) => {
+        result.push({
+          href: element
+          // display: false
+        })
+      })
+      return result
+    }
+  },
   mounted () {
-    // const vm = this
     const glide = new Glide('.glide', {
       type: 'carousel',
       perView: 1,
       gap: 0,
       //   animationDuration: 400,
       hoverpause: false,
-      autoplay: 2000,
+      autoplay: 5000,
       peek: 0
     })
     glide.mount({ Controls, Breakpoints, Swipe, Autoplay })

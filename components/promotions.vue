@@ -4,7 +4,7 @@
       <generic-title black-text="Promotions" gray-text="à ne pas manquer !" />
     </div>
     <div class="container justify-center overflow-hidden flex flex-wrap">
-      <div v-for="image in images" :key="image" class="w-full p-3 md:w-1/2 lg:w-1/3" data-aos="fade">
+      <div v-for="image in images" :key="image" class="w-full p-3 md:w-1/2 lg:w-1/3">
         <img class="w-full" :src="image" alt="">
       </div>
     </div>
@@ -82,7 +82,6 @@
 import title from './sub/generic-title.vue'
 import fbPosts from './sub/fb-posts.vue'
 import googleMaps from './sub/google-maps'
-import 'aos/dist/aos.css'
 export default {
   components: {
     'generic-title': title,
@@ -97,9 +96,6 @@ export default {
         'https://picsum.photos/400/400/?image=21'],
       svgClass: 'w-16 mx-auto text-gray-200 fill-current rounded-full bg-bmg-green-light p-2'
     }
-  },
-  created () {
-    import('aos').then(AOS => AOS.init())
   }
 }
 </script>

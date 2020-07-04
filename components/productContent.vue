@@ -4,10 +4,10 @@
       <generic-title animated="fade" black-text=" BM Graphic " gray-text="spécialisée dans l’impression publicitaire" />
     </div>
     <div class="container pb-10 justify-center flex flex-wrap">
-      <div v-for="product in products" :key="product.text" class="relative w-1/2 md:w-1/3 lg:w-1/4 p-2">
+      <div v-for="product in products" :key="product.service" class="relative w-1/2 md:w-1/3 lg:w-1/4 p-2">
         <img :src="product.image" class="w-full" alt="">
-        <div class="overlay" @click="goto(product)">
-          <h2 class="text-white font-semibold w-full break-words font-baumans text-4xl" v-text="product.text" />
+        <div class="overlay" @click="goto(product.service)">
+          <h2 class="text-white font-semibold w-full break-words font-baumans text-4xl" v-text="$store.getters['services/formattedName'](product.service)" />
         </div>
       </div>
     </div>
@@ -24,43 +24,35 @@ export default {
     return {
       products: [
         {
-          text: 'Impression Grand Format',
-          link: '/services/impression-grand-format',
+          service: 'impression-grand-format',
           image: '/images/index/product-content/bache tendu.jpg'
         },
         {
-          text: 'Impression Petit Format',
-          link: '/service/impression-petit-format',
+          service: 'impression-numérique-et-offset',
           image: '/images/index/product-content/brochure.jpg'
         },
         {
-          text: 'Décoration',
-          link: '/services/Décoration',
+          service: 'Stickers-et-Décoration',
           image: '/images/index/product-content/habillage murale.jpg'
         },
         {
-          text: 'PLV & Stands',
-          link: '/services/PLV-&-stands',
+          service: 'PLV-événementiel',
           image: 'images/index/product-content/STAND 43.jpg'
         },
         {
-          text: 'Enseignes & Signalétique',
-          link: '/services/enseignes-&-signalétique',
+          service: 'enseignes-&-signalétique',
           image: '/images/index/product-content/totem.jpg'
         },
         {
-          text: 'Communication Visuelle',
-          link: '/services/communication-visuelle',
+          service: 'communication-visuelle',
           image: '/images/index/product-content/carte de visite.jpg'
         },
         {
-          text: 'Marquage Textile',
-          link: '/services/marquage-textile',
+          service: 'marquage-textile',
           image: '/images/index/product-content/flokage.jpg'
         },
         {
-          text: 'Marquage Véhicules',
-          link: '/services/Marquage-véhicules',
+          service: 'Marquage-véhicules',
           image: '/images/index/product-content/couvring total.jpg'
         }
       ]
@@ -69,7 +61,8 @@ export default {
   },
   methods: {
     goto (product) {
-      this.$router.push({ path: product.link })
+      const link = this.$store.getters['services/link'](product)
+      this.$router.push({ path: link })
     }
   }
 }

@@ -63,7 +63,7 @@
                   v-for="sub in nav.sub"
                   :key="sub.name"
                   href="#responsive-header"
-                  class="block border-b font-light hover:bg-gray-300 py-2 pl-4 pr-4 text-gray-700 hover:text-black"
+                  class="block border-b capitalize font-light hover:bg-gray-300 py-2 pl-4 pr-4 text-gray-700 hover:text-black"
                   :to="'/services/'+sub.name"
                   v-text="format(sub.name)"
                 />
@@ -131,8 +131,8 @@ export default {
   },
   methods: {
     format (string) {
-      string = string.replace(/-/g, ' ')
-      return string.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase() })
+      return string.replace(/-/g, ' ')
+    //   return string.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase() })
     }
   }
 }

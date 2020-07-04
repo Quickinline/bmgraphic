@@ -1,13 +1,13 @@
 
 export default {
-   server: {
-     port: 8000, // par défaut : 3000
-     host: '0.0.0.0' // par défaut : localhost
-   },
+//    server: {
+//      port: 8000, // par défaut : 3000
+//      host: '0.0.0.0' // par défaut : localhost
+//    },
   mode: 'spa',
   /*
-	  ** Headers of the page
-	  */
+** Headers of the page
+*/
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -20,26 +20,27 @@ export default {
     ]
   },
   /*
-	  ** Customize the progress-bar color
-	  */
+** Customize the progress-bar color
+*/
   loading: { color: '#fff' },
   /*
-	  ** Global CSS
-	  */
+** Global CSS
+*/
   css: [
     '~/assets/css/tailwind.css'
   ],
   /*
-	  ** Plugins to load before mounting the App
-	  */
+** Plugins to load before mounting the App
+*/
   plugins: [
-	  // nuxt.config.js
+    // nuxt.config.js
 
     '~plugins/globalVars.js'
+    // '~plugins/aos'
   ],
   /*
-	  ** Nuxt.js dev-modules
-	  */
+** Nuxt.js dev-modules
+*/
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
@@ -47,18 +48,18 @@ export default {
     '@nuxtjs/tailwindcss'
   ],
   /*
-	  ** Nuxt.js modules
-	  */
+** Nuxt.js modules
+*/
   modules: [
     '@nuxtjs/pwa'
   ],
   /*
-	  ** Build configuration
-	  */
+** Build configuration
+*/
   build: {
     /*
-			** You can extend webpack config here
-			*/
+** You can extend webpack config here
+*/
     extend (config, ctx) {
     }
   }

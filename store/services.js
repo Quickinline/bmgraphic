@@ -323,12 +323,6 @@ export const state = () => ({
           image: '/images/services/marquage-textile/flokage.jpg'
         }
       ]
-      // details: [
-      //   {
-      //     name: 'test Détail',
-      //     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore libero ratione quae, quaerat ducimus inventore nobis perspiciatis molestias, sequi totam ea numquam omnis error mollitia adipisci, suscipit consectetur sunt fugit.'
-      //   }
-      // ]
     },
     {
       name: 'Stickers-et-Décoration',
