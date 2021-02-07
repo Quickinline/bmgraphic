@@ -44,6 +44,9 @@
         </div>
       </div>
     </div>
+    <div class="bg-darker-gray-base text-center py-1 md:py-2">
+      <span class="text-gray-500 font-baumans">&#169; BM Graphic {{ new Date().getFullYear() }} </span>
+    </div>
   </div>
 </template>
 
