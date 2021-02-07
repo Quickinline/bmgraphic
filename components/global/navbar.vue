@@ -33,7 +33,11 @@
     </div>
     <nav class="container w-full flex bg-white items-center lg:items-end justify-between flex-wrap">
       <div class="flex items-center flex-shrink-0 text-white my-2 mr-6">
-        <img src="~assets/svg/logo.svg" class="w-48" alt srcset>
+        <router-link
+          to="/"
+        >
+          <img src="~assets/svg/logo.svg" class="w-48" alt srcset>
+        </router-link>
       </div>
       <div class="block lg:hidden">
         <button
