@@ -38,6 +38,11 @@ export default {
         '/images/slider/sliderimage10.png'
       ]
     }
+  },
+  head () {
+    return {
+      title: 'Accueil - BMGraphic'
+    }
   }
 }
 </script>

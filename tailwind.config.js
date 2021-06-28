@@ -28,6 +28,7 @@ module.exports = {
 	  extend: {
 		  colors: {
 			  'gray-base': '#333',
+			  'darker-gray-base': '#1a1a1a',
 			  'dark-gray': '#ececec',
 			  'bmg-green-darken-10': 'hsl(64, 92%, 37%)',
 			  'bmg-green-darken-20': 'hsl(64, 92%, 27%)',
