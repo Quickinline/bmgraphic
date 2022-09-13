@@ -6,9 +6,27 @@ export default {
   },
   target: 'static',
   mode: 'spa',
+
+  generate: {
+    routes: [
+      '/services/communication-visuelle',
+      '/services/impression-numérique-et-offset',
+      '/services/impression-grand-format',
+      '/services/développement-logiciel',
+      '/services/enseignes-&-signalétique',
+      '/services/Marquage-véhicules',
+      '/services/PLV-événementiel',
+      '/services/marquage-textile',
+      '/services/Stickers-et-Décoration',
+      '/services/cuisines-&-Meubles',
+      '/services/traitement-de-façade',
+      '/services/aménagement-intérieur-extérieur'
+    ]
+  },
+
   /*
-	  ** Headers of the page
-	  */
+    ** Headers of the page
+    */
   head: {
     title: 'BMGraphic',
     meta: [
@@ -21,26 +39,26 @@ export default {
     ]
   },
   /*
-	  ** Customize the progress-bar color
-	  */
+    ** Customize the progress-bar color
+    */
   loading: { color: '#fff' },
   /*
-	  ** Global CSS
-	  */
+    ** Global CSS
+    */
   css: [
     '~/assets/css/tailwind.css'
   ],
   /*
-	  ** Plugins to load before mounting the App
-	  */
+    ** Plugins to load before mounting the App
+    */
   plugins: [
-	  // nuxt.config.js
+    // nuxt.config.js
 
     '~plugins/globalVars.js'
   ],
   /*
-	  ** Nuxt.js dev-modules
-	  */
+    ** Nuxt.js dev-modules
+    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
@@ -48,18 +66,33 @@ export default {
     '@nuxtjs/tailwindcss'
   ],
   /*
-	  ** Nuxt.js modules
-	  */
+    ** Nuxt.js modules
+    */
   modules: [
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    // '@nuxtjs/i18n'
   ],
+  // Internationalization options
+  // i18n: {
+  //   locales: ['fr', 'it'],
+  //   defaultLocale: 'fr',
+  //   vueI18n: {
+  //     fallbackLocale: 'fr',
+  //     messages: {
+  //       it: {
+  //         welcome: 'Bienvenuto'
+  //       }
+  //     }
+  //   }
+
+  // },
   /*
-	  ** Build configuration
-	  */
+    ** Build configuration
+    */
   build: {
     /*
-			** You can extend webpack config here
-			*/
+      ** You can extend webpack config here
+      */
     extend (config, ctx) {
     }
   }
