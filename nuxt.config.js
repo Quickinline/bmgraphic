@@ -36,6 +36,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      {
+        src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'
+      }
     ]
   },
   /*
@@ -70,7 +75,7 @@ export default {
     ** Nuxt.js modules
     */
   modules: [
-    '@nuxtjs/pwa',
+    '@nuxtjs/pwa'
     // '@nuxtjs/i18n'
   ],
   // Internationalization options
