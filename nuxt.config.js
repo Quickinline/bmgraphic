@@ -5,7 +5,8 @@ export default {
     host: '0.0.0.0' // par défaut : localhost
   },
   target: 'static',
-  mode: 'spa',
+  // mode: 'spa', < -- depreceated
+  ssr: false,
 
   generate: {
     routes: [
@@ -75,23 +76,23 @@ export default {
     ** Nuxt.js modules
     */
   modules: [
-    '@nuxtjs/pwa'
-    // '@nuxtjs/i18n'
+    '@nuxtjs/pwa',
+    '@nuxtjs/i18n'
   ],
   // Internationalization options
-  // i18n: {
-  //   locales: ['fr', 'it'],
-  //   defaultLocale: 'fr',
-  //   vueI18n: {
-  //     fallbackLocale: 'fr',
-  //     messages: {
-  //       it: {
-  //         welcome: 'Bienvenuto'
-  //       }
-  //     }
-  //   }
+  i18n: {
+    locales: ['fr', 'it'],
+    defaultLocale: 'fr',
+    vueI18n: {
+      fallbackLocale: 'fr',
+      messages: {
+        it: {
+          welcome: 'Bienvenuto'
+        }
+      }
+    }
 
-  // },
+  },
   /*
     ** Build configuration
     */
