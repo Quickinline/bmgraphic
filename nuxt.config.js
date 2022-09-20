@@ -84,12 +84,12 @@ export default {
     locales: ['fr', 'it'],
     defaultLocale: 'fr',
     vueI18n: {
-      fallbackLocale: 'fr',
-      messages: {
-        it: {
-          welcome: 'Bienvenuto'
-        }
-      }
+      fallbackLocale: 'fr'
+      // messages: {
+      //   it: {
+      //     welcome: 'Bienvenuto'
+      //   }
+      // }
     }
 
   },
