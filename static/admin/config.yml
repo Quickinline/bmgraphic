@@ -1,15 +1,21 @@
-local_backend: true
 backend:
-  site_domain: cms.netlify.com
   name: git-gateway
   branch: master
-media_folder: "images/uploads"
-publish_mode: editorial_workflow
+
+media_folder: static/img
+public_folder: /img
+
 collections:
-  - name: 'article'
-    label: 'Article'
-    folder: '_posts/article'
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'assets/content/blog'
     create: true
-    slug: "{{slug}}"
+    format: 'json'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
     fields:
-    - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
